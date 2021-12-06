@@ -15,6 +15,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  Image,
   useColorScheme,
   View,
 } from 'react-native';
@@ -27,41 +28,16 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
   return (
-    <Camera />
+      <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center'}}> 
+        <Camera />
+        <Image 
+          source={{ uri: 'https://play-lh.googleusercontent.com/r5sOR7RqM9jJelyeU-FlYgmnnXqgO4OtfJ1-_SfPbNn9RaLDBZ2aEvfcwOIXaIV--_w'}}
+          style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}}    
+        />
+      </View>
   );
 };
 

@@ -40,7 +40,7 @@ class Camera extends PureComponent {
           {({ camera, status, recordAudioPermissionStatus }) => {
             if (status !== 'READY') return <PendingView />;
             return (
-              <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
+              <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center'}}>
                 <TouchableOpacity onPress={() => this.takePicture(camera)} style={styles.capture}>
                   <Text style={{ fontSize: 14 }}> SNAP </Text>
                 </TouchableOpacity>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   preview: {
-    flex: 1,
+    flex: .5,
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
