@@ -42,7 +42,6 @@ class Camera extends PureComponent {
             return (
               <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center'}}>
                 <TouchableOpacity onPress={() => this.takePicture(camera)} style={styles.capture}>
-                  <Text style={{ fontSize: 14 }}> SNAP </Text>
                 </TouchableOpacity>
               </View>
             );
@@ -72,13 +71,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   capture: {
-    flex: 0,
+    flex: 1,
     backgroundColor: '#fff',
-    borderRadius: 5,
-    padding: 15,
-    paddingHorizontal: 20,
+    opacity: .3,
+    padding: 150,
     alignSelf: 'center',
-    margin: 20,
+    justifySelf: 'center',
   },
 });
 
